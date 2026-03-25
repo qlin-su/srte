@@ -1,0 +1,21 @@
+all:
+  vars:
+    # The generated inventory is assumed to be used from the clab host.
+    # Hence no http proxy should be used. Therefore we make sure the http
+    # module does not attempt using any global http proxy.
+    ansible_httpapi_use_proxy: false
+  children:
+    linux:
+      hosts:
+        pcep-lab-srte-router1:
+          ansible_host: 172.20.20.11
+        pcep-lab-srte-router2:
+          ansible_host: 172.20.20.12
+        pcep-lab-srte-router3:
+          ansible_host: 172.20.20.13
+        pcep-lab-srte-router4:
+          ansible_host: 172.20.20.14
+    rare:
+      hosts:
+        pcep-lab-srte-pce:
+          ansible_host: 172.20.20.10

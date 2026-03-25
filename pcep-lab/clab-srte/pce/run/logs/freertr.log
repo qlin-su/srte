@@ -1,0 +1,69 @@
+2026-02-27 11:04:04 info cfgInit.doInit:cfgInit.java:793 booting
+2026-02-27 11:04:04 info cfgInit.doInit:cfgInit.java:977 initializing hardware
+2026-02-27 11:04:04 info cfgInit.doInit:cfgInit.java:983 applying defaults
+2026-02-27 11:04:04 info cfgInit.doInit:cfgInit.java:1004 applying configuration
+2026-02-27 11:04:05 info cfgInit.executeSWcommands:cfgInit.java:759 line 15: "crypto mldsakey mldsa generate 65" : no such command
+2026-02-27 11:04:05 info cfgInit.executeSWcommands:cfgInit.java:759 line 47: "security mldsakey mldsa" : no such command
+2026-02-27 12:04:05 info cfgInit.executeSWcommands:cfgInit.java:781 line 101: "do write" : % saving configuration  % success  
+2026-02-27 12:04:05 info cfgInit.executeSWcommands:cfgInit.java:781 line 107: "ipv6 address 172.20.20.10 /64" : % invalid address  
+2026-02-27 12:04:05 info cfgInit.executeSWcommands:cfgInit.java:781 line 110: "do write" : % saving configuration  % success  
+2026-02-27 12:04:05 error cfgInit.doInit:cfgInit.java:1012 5 errors found
+2026-02-27 12:04:05 info cfgInit.doInit:cfgInit.java:1040 boot completed
+2026-02-27 12:04:07 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc1.sh
+2026-02-27 12:04:07 info cfgPrcss.doRound:cfgPrcss.java:509 restarting process ifc255.sh
+2026-02-27 12:04:08 info userLineHandler.doExec:userLine.java:947 rare logged in from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:14 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:16 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:18 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:19 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:21 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:23 warning rtrOspf4neigh.doRetXchg:rtrOspf4neigh.java:880 neighbor area0 192.168.10.1 up
+2026-02-27 12:04:23 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:25 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:26 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:26 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:27 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:29 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:29 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:30 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:30 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:31 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:32 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:32 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:33 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:33 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:34 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:34 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:35 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:35 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:36 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:36 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:36 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:37 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:37 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:37 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:38 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:38 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:38 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:39 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:39 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:39 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:40 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:40 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:41 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:41 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:42 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:42 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:42 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:43 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:43 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:44 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:44 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:45 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:45 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:49 info userReader.cmdEnter:userReader.java:1175 command pce#ping 10.0.0.1  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:50 info userReader.cmdEnter:userReader.java:1175 command pce#ping 10.0.0.2  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:52 info userReader.cmdEnter:userReader.java:1175 command pce#ping 10.0.0.3  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:04:52 info userReader.cmdEnter:userReader.java:1175 command pce#ping 10.0.0.4  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:06:16 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
+2026-02-27 12:07:06 info userReader.cmdEnter:userReader.java:1175 command pce#show ipv4 sockets OOB  from local:telnet <loop> 23 -> 127.0.0.1 33376
