@@ -141,6 +141,14 @@ sudo dnf install ./cshargextcap_0.10.7_linux_amd64.rpm
 sudo gpasswd -a $USER wireshark
 ```
 
+Capture d'une seule interface :
+
+![Edgeshark-single](readme-img/Edgeshark-single.png)
+
+Capture de plusieurs interfaces :
+
+![Edgeshark-multi](readme-img/Edgeshark-multi.png)
+
 ## Docs + liens utiles
 
 ### RARE/freertr
