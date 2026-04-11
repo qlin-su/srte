@@ -1,0 +1,74 @@
+{
+    "protocols": {
+        "protocol": [
+            {
+                "identifier": "openconfig-policy-types:BGP",
+                "name": "bgp-odl",
+                "bgp-openconfig-extensions:bgp": {
+                    "global": {
+                        "config": {
+                            "router-id": "172.20.20.10",
+                            "as": 65000
+                        },
+                        "apply-policy": {
+                            "config": {
+                                "import-policy": [
+                                    "default-odl-import-policy"
+                                ],
+                                "export-policy": [
+                                    "default-odl-export-policy"
+                                ],
+                                "default-export-policy": "REJECT-ROUTE",
+                                "default-import-policy": "REJECT-ROUTE"
+                            }
+                        },
+                        "afi-safis": {
+                            "afi-safi": [
+                                {
+                                    "afi-safi-name": "openconfig-bgp-types:IPV4-UNICAST"
+                                },
+                                {
+                                    "afi-safi-name": "LINKSTATE"
+                                }
+                            ]
+                        }
+                    },
+                    "neighbors": {
+                        "neighbor": [
+                            {
+                                "neighbor-address": "10.0.0.1",
+                                "timers": {
+                                    "config": {
+                                        "hold-time": 90,
+                                        "connect-retry": 10
+                                    }
+                                },
+                                "transport": {
+                                    "config": {
+                                        "remote-port": 179,
+                                        "passive-mode": "false"
+                                    }
+                                },
+                                "config": {
+                                    "peer-as": 65000,
+                                    "peer-type": "INTERNAL"
+                                },
+                                "afi-safis": {
+                                    "afi-safi": [
+                                        {
+                                            "afi-safi-name": "openconfig-bgp-types:IPV4-UNICAST"
+                                        },
+                                        {
+                                            "afi-safi-name": "LINKSTATE"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
+
