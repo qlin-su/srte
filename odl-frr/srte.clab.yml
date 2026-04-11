@@ -23,8 +23,6 @@ topology:
       binds:
         - config/setup-odl.sh:/tmp/setup.sh
         - config/odl-config/bgp-conf.json:/opt/opendaylight/config/bgp-conf.json
-        - config/odl-config/pcep-conf.json:/opt/opendaylight/config/pcep-conf.json
-        - config/odl-config/graph-conf.json:/opt/opendaylight/config/graph-conf.json
       mgmt-ipv4: 172.20.20.10
 
     router1:
