@@ -162,15 +162,10 @@ Capture de plusieurs interfaces :
 
 ## Docs + liens utiles
 
-### RARE/freertr
+### OpenDaylight
 
-- https://containerlab.dev/manual/kinds/rare-freertr/#user-defined-config
-- https://github.com/rare-freertr/freeRtr
-- https://github.com/rare-freertr/freeRtr-containerlab/blob/main/default.cfg
-- https://github.com/mc36/freeRtr
-- https://docs.rare.geant.org/
-- http://www.freertr.org/
-- http://www.freertr.org/test/tests5.html
+- https://docs.opendaylight.org/en/stable-titanium/
+- https://docs.opendaylight.org/projects/bgpcep/en/latest/index.html
 
 ### FRR
 
