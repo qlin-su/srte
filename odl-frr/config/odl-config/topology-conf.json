@@ -1,0 +1,12 @@
+{
+  "topology": [
+    {
+      "topology-id": "sr-te-linkstate-topology",
+      "odl-bgp-topology-config:rib-id": "bgp-odl",
+      "topology-types": {
+         "odl-bgp-topology-types:bgp-linkstate-topology": {}
+      }
+    }
+  ]
+}
+

@@ -25,9 +25,6 @@
                         "afi-safis": {
                             "afi-safi": [
                                 {
-                                    "afi-safi-name": "openconfig-bgp-types:IPV4-UNICAST"
-                                },
-                                {
                                     "afi-safi-name": "LINKSTATE"
                                 }
                             ]
@@ -56,8 +53,31 @@
                                 "afi-safis": {
                                     "afi-safi": [
                                         {
-                                            "afi-safi-name": "openconfig-bgp-types:IPV4-UNICAST"
-                                        },
+                                            "afi-safi-name": "LINKSTATE"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "neighbor-address": "10.0.0.4",
+                                "timers": {
+                                    "config": {
+                                        "hold-time": 90,
+                                        "connect-retry": 10
+                                    }
+                                },
+                                "transport": {
+                                    "config": {
+                                        "remote-port": 179,
+                                        "passive-mode": "false"
+                                    }
+                                },
+                                "config": {
+                                    "peer-as": 65000,
+                                    "peer-type": "INTERNAL"
+                                },
+                                "afi-safis": {
+                                    "afi-safi": [
                                         {
                                             "afi-safi-name": "LINKSTATE"
                                         }

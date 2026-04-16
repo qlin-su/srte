@@ -8,7 +8,10 @@ settings: null
 topology:
   kinds:
     linux:
-      image: quay.io/frrouting/frr:master
+      # Image branche de développement
+      #image: quay.io/frrouting/frr:master
+      # Image branche SR Capabilities pas encore implémentée (au 16-04-2026)
+      image: frr-bgp-ls-tlvs:1.0
       sysctls:
         net.mpls.platform_labels: 100000
       exec:
@@ -23,6 +26,8 @@ topology:
       binds:
         - config/setup-odl.sh:/tmp/setup.sh
         - config/odl-config/bgp-conf.json:/opt/opendaylight/config/bgp-conf.json
+        - config/odl-config/pcep-conf.json:/opt/opendaylight/config/pcep-conf.json
+        - config/odl-config/topology-conf.json:/opt/opendaylight/config/topology-conf.json
       mgmt-ipv4: 172.20.20.10
 
     router1:

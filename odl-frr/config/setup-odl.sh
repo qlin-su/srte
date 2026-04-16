@@ -16,5 +16,11 @@ sleep 5
 echo "Configuring BGP..."
 curl -X PUT "http://172.20.20.10:8181/rests/data/openconfig-network-instance:network-instances/network-instance=global-bgp/protocols" -u admin:admin -H "Content-Type: application/json" -d @config/bgp-conf.json
 
+echo "Creating SR-TE Linkstate topology..."
+curl -X POST "http://172.20.20.10:8181/rests/data/network-topology:network-topology" -u admin:admin -H "Content-Type: application/json" -d @config/topology-conf.json
+
+echo "Configuring PCEP..."
+curl -X PUT "http://172.20.20.10:8181/rests/data/network-topology:network-topology/topology=pcep-topology" -u admin:admin -H "Content-Type: application/json" -d @config/pcep-conf.json
+
 echo "Done"
 

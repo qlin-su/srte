@@ -1,9 +1,35 @@
 # README
 
+## Structure du lab
+
+`srte.clab.yml` contient la configuration du lab Containerlab.\
+Le répertoire `ODL-Vanadium` contient le `Dockerfile` pour créer l'image ODL.\
+Le répertoire `config` contient la configuration pour chaque routeur individuel :
+
+- `deamons` : configuration des démons à démarrer sur les routeurs FRR.
+- `frrx.conf` : configuration pour un routeur FRR.
+- `setup-odl.sh` : script lancé sur le routeur ODL pour le configurer.
+- répertoire `odl-config` : configuration du routeur ODL.
+
 ## Démarrage du lab
+
+Créer une image depuis la branche implémentant le TLV SR Capabilities :
+
+```
+git clone -b bgp_ls_add_several_tlvs https://github.com/hedrok/frr.git
+docker build -f docker/alpine/Dockerfile -t frr-bgp-ls-tlvs:1.0 .
+```
+
+Lancement du lab :
 
 ```
 containerlab deploy; docker exec -it srte-lab-odl-frr-pce bash -c "sh /tmp/setup.sh"
+```
+
+Ou bien, pour redéployer le lab :
+
+```
+containerlab redeploy --cleanup; docker exec -it srte-lab-odl-frr-pce bash -c "sh /tmp/setup.sh"
 ```
 
 ## Activation de MPLS sur la VM
