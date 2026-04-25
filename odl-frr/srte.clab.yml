@@ -1,0 +1,85 @@
+name: odl-frr
+prefix: srte-lab
+mgmt:
+  network: br-odl-frr-lab
+  ipv4-subnet: 172.20.20.0/24
+settings: null
+
+topology:
+  kinds:
+    linux:
+      # Image branche de développement
+      #image: quay.io/frrouting/frr:master
+      # Image branche SR Capabilities pas encore implémentée (au 25-04-2026)
+      image: frr-bgp-ls-tlvs:1.0
+      sysctls:
+        net.mpls.platform_labels: 100000
+      exec:
+        # Activation de MPLS sur toutes les interfaces
+        - bash -c "for i in /proc/sys/net/mpls/conf/*/input; do echo 1 > $i; done"
+      binds:
+        - config/daemons:/etc/frr/daemons
+  nodes:
+    pce:
+      kind: linux
+      image: odl-vanadium:0.23.0
+      binds:
+        - config/setup-odl.sh:/tmp/setup.sh
+        - config/odl-config/bgp-conf.json:/opt/opendaylight/config/bgp-conf.json
+        - config/odl-config/pcep-conf.json:/opt/opendaylight/config/pcep-conf.json
+        - config/odl-config/topology-conf.json:/opt/opendaylight/config/topology-conf.json
+      mgmt-ipv4: 172.20.20.10
+
+    router1:
+      kind: linux
+      binds:
+        - config/frr1.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.20.20.11
+    router2:
+      kind: linux
+      binds:
+        - config/frr2.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.20.20.12
+    router3:
+      kind: linux
+      binds:
+        - config/frr3.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.20.20.13
+    router4:
+      kind: linux
+      binds:
+        - config/frr4.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.20.20.14
+    router5:
+      kind: linux
+      binds:
+        - config/frr5.conf:/etc/frr/frr.conf
+      mgmt-ipv4: 172.20.20.15
+
+    pc1:
+      kind: linux
+      image: wbitt/network-multitool
+      mgmt-ipv4: 172.20.20.21
+      exec:
+        - ip addr add 192.168.10.2/30 dev eth1
+        - ip route replace default via 192.168.10.1
+    pc2:
+      kind: linux
+      image: wbitt/network-multitool
+      mgmt-ipv4: 172.20.20.22
+      exec:
+        - ip addr add 192.168.40.2/30 dev eth1
+        - ip route replace default via 192.168.40.1
+
+  links:
+  - endpoints: ["router1:eth1", "router2:eth1"]
+  - endpoints: ["router1:eth2", "router4:eth2"]
+  - endpoints: ["router1:eth3", "router3:eth3"]
+  - endpoints: ["router1:eth4", "pc1:eth1"]
+  - endpoints: ["router2:eth2", "router3:eth2"]
+  - endpoints: ["router2:eth3", "router5:eth1"]
+  - endpoints: ["router5:eth2", "router4:eth3"]
+  - endpoints: ["router3:eth1", "router4:eth1"]
+  - endpoints: ["router4:eth4", "pc2:eth1"]
+
+debug: false

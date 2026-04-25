@@ -1,0 +1,53 @@
+name: arista
+prefix: null
+mgmt: {}
+settings: null
+topology:
+  kinds:
+    arista_ceos:
+      image: ceos:4.35.2F
+      memory: 1200M
+  nodes:
+    eth1-1:
+      kind: arista_ceos
+      group: tier-1
+      startup-config: config/arista1-1.cfg
+    eth1-2:
+      kind: arista_ceos
+      group: tier-1
+      startup-config: config/arista1-2.cfg
+    eth2-1:
+      kind: arista_ceos
+      group: tier-2
+      startup-config: config/arista2-1.cfg
+    eth2-2:
+      kind: arista_ceos
+      group: tier-2
+      startup-config: config/arista2-2.cfg
+    eth2-3:
+      kind: arista_ceos
+      group: tier-2
+      startup-config: config/arista2-3.cfg
+  links:
+  - endpoints:
+    - eth1-1:eth1
+    - eth2-1:eth1
+  - endpoints:
+    - eth1-1:eth2
+    - eth2-2:eth1
+  - endpoints:
+    - eth1-1:eth3
+    - eth2-3:eth1
+  - endpoints:
+    - eth1-2:eth1
+    - eth2-1:eth2
+  - endpoints:
+    - eth1-2:eth2
+    - eth2-2:eth2
+  - endpoints:
+    - eth1-2:eth3
+    - eth2-3:eth2
+  - endpoints:
+    - eth1-1:eth4
+    - eth1-2:eth4
+debug: false
