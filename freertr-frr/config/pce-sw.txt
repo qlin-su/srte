@@ -65,21 +65,18 @@ client capture-path /rtr/run/pcap/
 !
 !
 !
+!
 vrf definition default
  exit
 !
 router ospf4 1
  vrf default
- router-id 10.0.0.10
  area 0 enable
  area 0 segrout
  area 0 traffeng
- traffeng-id 10.0.0.10
+ router-id 1.0.0.0
+ traffeng-id 1.0.0.0
  segrout 8000 base 16000
- !
- flexalgo 128 default
- redistribute connected
- exit
 !
 interface ethernet255
  vrf forwarding OOB
@@ -99,6 +96,7 @@ ipv4 route OOB 10.0.0.1 255.255.255.255 172.20.20.11
 ipv4 route OOB 10.0.0.2 255.255.255.255 172.20.20.12
 ipv4 route OOB 10.0.0.3 255.255.255.255 172.20.20.13
 ipv4 route OOB 10.0.0.4 255.255.255.255 172.20.20.14
+ipv4 route OOB 10.0.0.5 255.255.255.255 172.20.20.15
 !
 server pcep pce1
  vrf OOB

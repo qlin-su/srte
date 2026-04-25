@@ -1,0 +1,44 @@
+name: first-test
+prefix: null
+mgmt: {}
+settings: null
+topology:
+  kinds:
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux:latest
+  nodes:
+    srl1-1:
+      kind: nokia_srlinux
+      group: tier-1
+    srl1-2:
+      kind: nokia_srlinux
+      group: tier-1
+    srl2-1:
+      kind: nokia_srlinux
+      group: tier-2
+    srl2-2:
+      kind: nokia_srlinux
+      group: tier-2
+    srl2-3:
+      kind: nokia_srlinux
+      group: tier-2
+  links:
+  - endpoints:
+    - srl1-1:e1-1
+    - srl2-1:e1-1
+  - endpoints:
+    - srl1-1:e1-2
+    - srl2-2:e1-1
+  - endpoints:
+    - srl1-1:e1-3
+    - srl2-3:e1-1
+  - endpoints:
+    - srl1-2:e1-1
+    - srl2-1:e1-2
+  - endpoints:
+    - srl1-2:e1-2
+    - srl2-2:e1-2
+  - endpoints:
+    - srl1-2:e1-3
+    - srl2-3:e1-2
+debug: false

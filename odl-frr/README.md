@@ -17,6 +17,7 @@ Créer une image depuis la branche implémentant le TLV SR Capabilities :
 
 ```
 git clone -b bgp_ls_add_several_tlvs https://github.com/hedrok/frr.git
+cd frr
 docker build -f docker/alpine/Dockerfile -t frr-bgp-ls-tlvs:1.0 .
 ```
 
